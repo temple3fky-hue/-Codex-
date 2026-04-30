@@ -67,6 +67,8 @@ python main.py
 - 见 `docs/quick_start_examples.md`（包含 Unsplash/Pexels/Pixabay 示例链接、下载目录和导出路径）。
 
 ## 测试命令
+> 请确认 ZIP 中包含 `tests/__init__.py` 与 `tests/test_extractor.py`，否则 `python -m unittest` 可能显示 0 tests。
+
 ```bash
 # 全量单元测试（离线可跑）
 python -m unittest
@@ -76,6 +78,18 @@ python -m compileall main.py gui core downloader models utils tests
 
 # 三站点烟雾测试（需外网与 Playwright 环境）
 python tests/smoke_sites.py
+```
+
+
+## Termux 推荐 CLI 模式（无 GUI）
+如果 Termux 无法正常打开 Flet GUI，可使用命令行模式：
+
+```bash
+# 直接传 URL
+python cli.py https://unsplash.com/photos/A-NVHPka9Rk --export-csv
+
+# 从文件读取 URL（每行一个）
+python cli.py --file urls.txt --download-dir downloads --concurrency 3 --export-excel
 ```
 
 ## Termux（Android）
