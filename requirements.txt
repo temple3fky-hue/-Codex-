@@ -1,0 +1,11 @@
+flet==0.28.3
+playwright==1.54.0
+beautifulsoup4==4.13.4
+requests==2.32.4
+httpx==0.28.1
+aiohttp==3.12.15
+aiosqlite==0.21.0
+pandas==2.3.1
+openpyxl==3.1.5
+fake-useragent==2.2.0
+python-dotenv==1.1.1
